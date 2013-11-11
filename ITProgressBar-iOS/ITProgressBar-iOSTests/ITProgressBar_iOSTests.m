@@ -1,18 +1,18 @@
 //
-//  ITProgressIndicator_iOSTests.m
-//  ITProgressIndicator-iOSTests
+//  ITProgressBar_iOSTests.m
+//  ITProgressBar-iOSTests
 //
-//  Created by Ilija Tovilo on 08/11/13.
+//  Created by Ilija Tovilo on 11/11/13.
 //  Copyright (c) 2013 Ilija Tovilo. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface ITProgressIndicator_iOSTests : XCTestCase
+@interface ITProgressBar_iOSTests : XCTestCase
 
 @end
 
-@implementation ITProgressIndicator_iOSTests
+@implementation ITProgressBar_iOSTests
 
 - (void)setUp
 {

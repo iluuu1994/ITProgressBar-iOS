@@ -1,8 +1,8 @@
 //
 //  ITViewController.h
-//  ITProgressIndicator-iOS
+//  ITProgressBar-iOS
 //
-//  Created by Ilija Tovilo on 08/11/13.
+//  Created by Ilija Tovilo on 11/11/13.
 //  Copyright (c) 2013 Ilija Tovilo. All rights reserved.
 //
 

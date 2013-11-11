@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ITViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L1Y-8a-HVQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="YhI-O6-SpZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUl-7q-Q1b">
+                                <rect key="frame" x="20" y="93" width="728" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleAnimates:" destination="BYZ-38-t0r" eventType="touchUpInside" id="icd-9p-eWN"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nlQ-Iu-VcR">
+                                <rect key="frame" x="18" y="52" width="732" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="setProgress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LQe-Ji-HYh"/>
+                                </connections>
+                            </slider>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="quK-3O-cCE" customClass="ITProgressBar">
+                                <rect key="frame" x="20" y="30" width="728" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="kNi-tr-aad"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="quK-3O-cCE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="3ek-QQ-sbX"/>
+                            <constraint firstItem="jUl-7q-Q1b" firstAttribute="top" secondItem="nlQ-Iu-VcR" secondAttribute="bottom" constant="8" id="802-Wu-J3Z"/>
+                            <constraint firstAttribute="trailing" secondItem="quK-3O-cCE" secondAttribute="trailing" constant="20" id="D9r-FH-NqX"/>
+                            <constraint firstAttribute="trailing" secondItem="nlQ-Iu-VcR" secondAttribute="trailing" constant="20" id="Vg5-D2-DdK"/>
+                            <constraint firstItem="jUl-7q-Q1b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="gM2-sl-17W"/>
+                            <constraint firstAttribute="trailing" secondItem="jUl-7q-Q1b" secondAttribute="trailing" constant="20" id="jbJ-4X-AjX"/>
+                            <constraint firstItem="nlQ-Iu-VcR" firstAttribute="top" secondItem="quK-3O-cCE" secondAttribute="bottom" constant="8" id="uv8-y2-i4s"/>
+                            <constraint firstItem="quK-3O-cCE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="wdV-5B-5Ih"/>
+                            <constraint firstItem="nlQ-Iu-VcR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="xql-Za-qNm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressBar" destination="quK-3O-cCE" id="FX0-hh-F6j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

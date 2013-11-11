@@ -53,6 +53,12 @@
     [self resizeLayers];
     
     self.animates = YES;
+    
+    [self addObserver:self forKeyPath:@"bounds" options:0 context:nil];
+}
+
+- (void)dealloc {
+    [self removeObserver:self forKeyPath:@"bounds"];
 }
 
 - (void)initLayers {
@@ -65,6 +71,13 @@
     [self.fillClipLayer addSublayer:self.patternLayer];
     [self.patternLayer setDelegate:self];
     [self.patternLayer setNeedsDisplayOnBoundsChange:NO];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (object == self && [keyPath isEqualToString:@"bounds"]) {
+        [self resizeLayers];
+    }
 }
 
 
