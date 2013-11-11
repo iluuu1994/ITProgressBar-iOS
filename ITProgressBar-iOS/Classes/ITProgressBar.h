@@ -25,7 +25,4 @@
 /// @property animationDuration - The duration of
 @property (nonatomic) CGFloat animationDuration;
 
-/// @property fillColor - The color used for the fill
-@property (nonatomic, strong) UIColor *fillColor;
-
 @end
