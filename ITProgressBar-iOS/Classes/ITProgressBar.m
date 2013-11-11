@@ -49,6 +49,7 @@
     [self initLayers];
     _animationDuration = 0.3;
     _progress = 1.0;
+    _fillColor = [UIColor colorWithRed:0.00f green:0.47f blue:0.99f alpha:1.00f];
     _patternImage = [self stripesImageWithSize:CGSizeMake(30, 20)];
     [self resizeLayers];
     
@@ -99,6 +100,7 @@
     self.clipLayer.cornerRadius = self.bounds.size.height / 2.0;
     self.fillClipLayer.cornerRadius = self.bounds.size.height / 2.0;
     
+    self.fillClipLayer.backgroundColor = self.fillColor.CGColor;
     self.patternLayer.backgroundColor = [UIColor colorWithPatternImage:self.patternImage].CGColor;
 }
 
@@ -168,7 +170,6 @@
     if (!_fillClipLayer) {
         _fillClipLayer = [CALayer layer];
         _fillClipLayer.masksToBounds = YES;
-        _fillClipLayer.backgroundColor = [UIColor colorWithRed:0.00f green:0.47f blue:0.99f alpha:1.00f].CGColor;
     }
     return _fillClipLayer;
 }
@@ -201,6 +202,11 @@
     moveAnim.autoreverses        = NO;
     
     return moveAnim;
+}
+
+- (void)setFillColor:(UIColor *)fillColor {
+    _fillColor = fillColor;
+    [self resizeLayers];
 }
 
 
