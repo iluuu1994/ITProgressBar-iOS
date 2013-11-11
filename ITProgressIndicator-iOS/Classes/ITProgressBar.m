@@ -48,7 +48,7 @@
 - (void)setUp {
     [self initLayers];
     _animationDuration = 0.3;
-    _progress = 0.5;
+    _progress = 1.0;
     _patternImage = [self stripesImageWithSize:CGSizeMake(30, 20)];
     [self resizeLayers];
     
