@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.source_files = "ITProgressBar-iOS/Classes/*{h,m}"
 
-  s.frameworks   = "Cocoa", "QuartzCore"
+  s.frameworks   = "QuartzCore"
 
   s.requires_arc = true
 end
